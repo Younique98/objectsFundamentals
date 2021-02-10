@@ -74,6 +74,11 @@ for (let groupsOfArtists in tenAlbum){
     Title: Even Flow - Length: 293
     etc.
 */
+/// Bryans way of doing this 
+const trackArray = tenAlbum["tracks"]
+console.log ('trackArray: ', trackArray)
+
+// ------ another One
 for (const object of tenAlbum.tracks) {
     console.log(`Title: ${object.title} with a Length: ${object.length}`)
 }
@@ -96,33 +101,22 @@ console.log(`Keys:`, Object.values(tenAlbum))
 console.log(`Keys:`, Object.entries(tenAlbum))
 // TODO: iterate the tenAlbum object and log the key/value pairs to the console using each of the above Object methods:
 // .keys()
-// .values()
-// .entries()
-console.log(tenAlbum)
-for (const objectKey in tenAlbum) {
-    console.log(Object.keys(objectKey))
-}
-for (const objectValues in tenAlbum) {
-    console.log(Object.keys(objectValues))
-}
-for (const objectEntries in tenAlbum) {
-    console.log(Object.keys(objectEntries))
-}
-for (let groupsOfArtists in tenAlbum){
-    console.log(groupsOfArtists, tenAlbum[groupsOfArtists])
-    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
-    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
-    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
-    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+for (let key of Object.keys(tenAlbum)) {
+    console.log(key, tenAlbum[key])
 }
 
-for (let groupsOfArtists in Object.keys(tenAlbum)){
-    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
-    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
-    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+
+
+// .values()
+for (const value of Object.values(tenAlbum)) {
+    console.log(value)
+    const key = Object.keys(tenAlbum).find(key => tenAlbum[key] === value )
+    console.log(key, value)
 }
-for (let groups in tenAlbum){
-    console.log(groups, tenAlbum[groups])
+// .entries()
+// ---- In class walkthrough
+for (let [key, value] of Object.entries(tenAlbum)){
+    console.log(`Key: ${key} - Value: ${value}`);
 }
 // ! ADD AND COMMIT
 
@@ -155,7 +149,12 @@ console.log(Object.values(tenAlbum.tracks))
 // console.log(bandEvent)
 // console.log(element[tracks].title)
 // TODO: USING ANY OF THE WAYS TO LOOP AND ACCESS OBJECT PROPERTIES - iterate the 'firstSet' array and log the name of each song to the console
+const tracksArray = tenAlbum.tracks
+console.log(tracksArray)
+// for(let songs in Object.keys(tenAlbum.tracksnames)){
 
+//     console.log(songs)
+// }
 // ! ADD AND COMMIT
 
 // BONUS IF YOU HAVE TIME...

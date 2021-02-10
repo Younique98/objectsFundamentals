@@ -129,18 +129,31 @@ for (let groups in tenAlbum){
 // USING THE DATA FROM .setlists
 import { setlistsFromAPI } from "./setlists.js";
 // TODO: Log 'setlistsFromAPI' to the console
-
+console.log(setlistsFromAPI)
 // TODO: USING the 'setlistsFromAPI' data, find the event dated 18-08-2018 and store that event object in a variable named 'event'
+const event = setlistsFromAPI.setlist[3]
 
 // TODO: log the 'event' object to the console
-
+console.log(event)
 // TODO: USING DOT OR BRACKET NOTATION AND STRING INTERPOLATION, create a string which includes the name of the band, the venue, and the date of the event and store it in a new variable clled "bandVenueDate"
 // this string should look something like "Pearl Jam - Wrigley Field - 18-08-2018"
-
+console.log(` ${tenAlbum.artist} - ${tenAlbum.title} - ${tenAlbum.released}`)
 // TODO: log the 'bandVenueDate' string to the console
-
+console.log('bandVenueDate')
+// const wordPresent = tenAlbum;
+// var wordFind = wordPresent.includes("bandVenueDate")
+// console.log(wordFind)
 // TODO: Find the first set of songs of the 'event' object and store it in a variable named 'firstSet'
+const manyTitles = tenAlbum.tracks
+console.log(manyTitles)
+for (let captureTitles in manyTitles.title){
+    console.log(captureTitles)
+}
+console.log(Object.values(tenAlbum.tracks))
 
+// const bandEvent = tenAlbum.find(element => element[tracks].title )
+// console.log(bandEvent)
+// console.log(element[tracks].title)
 // TODO: USING ANY OF THE WAYS TO LOOP AND ACCESS OBJECT PROPERTIES - iterate the 'firstSet' array and log the name of each song to the console
 
 // ! ADD AND COMMIT

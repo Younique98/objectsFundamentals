@@ -88,16 +88,42 @@ for (const object in tenAlbum.tracks) {
 
 // OBJECT.keys() / .values() / .entries()
 // TODO: log the keys of the tenAlbum object using Object.keys()
+console.log(`Keys:`, Object.keys(tenAlbum))
 
 // TODO: log the values of the tenAlbum object Object.values()
-
+console.log(`Keys:`, Object.values(tenAlbum))
 // TODO: log the entries of the tenAlbum object Object.entries()
-
+console.log(`Keys:`, Object.entries(tenAlbum))
 // TODO: iterate the tenAlbum object and log the key/value pairs to the console using each of the above Object methods:
 // .keys()
 // .values()
 // .entries()
+console.log(tenAlbum)
+for (const objectKey in tenAlbum) {
+    console.log(Object.keys(objectKey))
+}
+for (const objectValues in tenAlbum) {
+    console.log(Object.keys(objectValues))
+}
+for (const objectEntries in tenAlbum) {
+    console.log(Object.keys(objectEntries))
+}
+for (let groupsOfArtists in tenAlbum){
+    console.log(groupsOfArtists, tenAlbum[groupsOfArtists])
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+}
 
+for (let groupsOfArtists in Object.keys(tenAlbum)){
+    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+}
+for (let groups in tenAlbum){
+    console.log(groups, tenAlbum[groups])
+}
 // ! ADD AND COMMIT
 
 // USING THE DATA FROM .setlists

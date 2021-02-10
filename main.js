@@ -88,33 +88,72 @@ for (const object in tenAlbum.tracks) {
 
 // OBJECT.keys() / .values() / .entries()
 // TODO: log the keys of the tenAlbum object using Object.keys()
+console.log(`Keys:`, Object.keys(tenAlbum))
 
 // TODO: log the values of the tenAlbum object Object.values()
-
+console.log(`Keys:`, Object.values(tenAlbum))
 // TODO: log the entries of the tenAlbum object Object.entries()
-
+console.log(`Keys:`, Object.entries(tenAlbum))
 // TODO: iterate the tenAlbum object and log the key/value pairs to the console using each of the above Object methods:
 // .keys()
 // .values()
 // .entries()
+console.log(tenAlbum)
+for (const objectKey in tenAlbum) {
+    console.log(Object.keys(objectKey))
+}
+for (const objectValues in tenAlbum) {
+    console.log(Object.keys(objectValues))
+}
+for (const objectEntries in tenAlbum) {
+    console.log(Object.keys(objectEntries))
+}
+for (let groupsOfArtists in tenAlbum){
+    console.log(groupsOfArtists, tenAlbum[groupsOfArtists])
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+}
 
+for (let groupsOfArtists in Object.keys(tenAlbum)){
+    console.log('groupsOfArtists: ', Object.values(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.entries(groupsOfArtists));
+    console.log('groupsOfArtists: ', Object.keys(groupsOfArtists));
+}
+for (let groups in tenAlbum){
+    console.log(groups, tenAlbum[groups])
+}
 // ! ADD AND COMMIT
 
 // USING THE DATA FROM .setlists
 import { setlistsFromAPI } from "./setlists.js";
 // TODO: Log 'setlistsFromAPI' to the console
-
+console.log(setlistsFromAPI)
 // TODO: USING the 'setlistsFromAPI' data, find the event dated 18-08-2018 and store that event object in a variable named 'event'
+const event = setlistsFromAPI.setlist[3]
 
 // TODO: log the 'event' object to the console
-
+console.log(event)
 // TODO: USING DOT OR BRACKET NOTATION AND STRING INTERPOLATION, create a string which includes the name of the band, the venue, and the date of the event and store it in a new variable clled "bandVenueDate"
 // this string should look something like "Pearl Jam - Wrigley Field - 18-08-2018"
-
+console.log(` ${tenAlbum.artist} - ${tenAlbum.title} - ${tenAlbum.released}`)
 // TODO: log the 'bandVenueDate' string to the console
-
+console.log('bandVenueDate')
+// const wordPresent = tenAlbum;
+// var wordFind = wordPresent.includes("bandVenueDate")
+// console.log(wordFind)
 // TODO: Find the first set of songs of the 'event' object and store it in a variable named 'firstSet'
+const manyTitles = tenAlbum.tracks
+console.log(manyTitles)
+for (let captureTitles in manyTitles.title){
+    console.log(captureTitles)
+}
+console.log(Object.values(tenAlbum.tracks))
 
+// const bandEvent = tenAlbum.find(element => element[tracks].title )
+// console.log(bandEvent)
+// console.log(element[tracks].title)
 // TODO: USING ANY OF THE WAYS TO LOOP AND ACCESS OBJECT PROPERTIES - iterate the 'firstSet' array and log the name of each song to the console
 
 // ! ADD AND COMMIT

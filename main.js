@@ -57,13 +57,16 @@ const tenAlbum = {
 
 // Dot vs. Bracket Notation - accessing properties
 // TODO: USING DOT NOTATION, access the object properties (artist, title, released) and log the following message to the console using string interpolation: "Pearl Jam's Album Ten was released on 8/27/1991"
+console.log(`${tenAlbum.artist} Album ${tenAlbum.title} was released on ${tenAlbum.released}.` );
 
 // TODO: Output the same messge to the console using BRACKET NOTATION
-
+console.log(`${tenAlbum['artist']} Album ${tenAlbum['title']} was released on ${tenAlbum['released']}.` );
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
-
+for (let groupsOfArtists in tenAlbum){
+    console.log(groupsOfArtists, tenAlbum[groupsOfArtists])
+}
 // Accessing iterable properties on objects
 // TODO: Iterate the tracks array and output the title of each song and its song length using a for loop of your choosing. The output should look something like this:
 /*
@@ -71,6 +74,15 @@ const tenAlbum = {
     Title: Even Flow - Length: 293
     etc.
 */
+for (const object of tenAlbum.tracks) {
+    console.log(`Title: ${object.title} with a Length: ${object.length}`)
+}
+
+// ---- another way to do this
+console.log("Another way to write out the for loop")
+for (const object in tenAlbum.tracks) {
+    console.log(`Title: ${tenAlbum.tracks[object].title} - Length: ${tenAlbum.tracks[object].length}`)
+}
 
 // ! ADD AND COMMIT
 
